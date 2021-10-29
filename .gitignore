@@ -5,6 +5,7 @@
 # Prerequisites
 *.d
 
+
 # Compiled Object files
 *.slo
 *.lo
@@ -133,6 +134,9 @@ Sessionx.vim
 # Auto-generated tag files
 tags
 # Persistent undo
+
 [._]*.un~
+
+*.zip
 
 # End of https://www.toptal.com/developers/gitignore/api/c++,vim,qt,qtcreator
