@@ -1,0 +1,43 @@
+@startuml
+
+left to right direction
+' top to bottom direction
+
+together {
+user << Human >>
+(Add to favorite) as (UC4)
+(Suggestion) as (UC5)
+(Edit METADATA) as (UC6)
+(View books) as (UC0)
+}
+
+user -right-> UC0
+user -right-> UC4
+user -right-> UC5
+user -right-> UC6
+together {
+(Title Sorting) as (UC8)
+(Category view) as (UC7)
+(Search books) as (UC1)
+(Read books) as (UC3)
+(Tracking of pages) as (UC11)
+(Add books) as (UC9)
+(Delete books) as (UC10)
+}
+
+:Software: as sw
+sw -> UC11
+
+(Download books) as (UC2)
+
+UC8 -left-> UC0: extends
+UC7 -left-> UC0: extends
+UC1 -left-> UC0: extends
+UC3 -left-> UC0: extends
+UC9 -left-> UC0: extends
+UC10 -left-> UC0: extends
+
+UC2 -left-> UC9: extends
+
+UC11 -left-> UC3: extends
+@enduml
