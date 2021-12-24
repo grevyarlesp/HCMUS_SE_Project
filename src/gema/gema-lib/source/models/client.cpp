@@ -2,8 +2,8 @@
 
 namespace gema {
 namespace models{
-Client::Client()
-{
+Client::Client() {
+
 }
 
 }

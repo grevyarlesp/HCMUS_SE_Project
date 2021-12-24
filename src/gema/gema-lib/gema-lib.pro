@@ -14,9 +14,13 @@ INCLUDEPATH += source
 
 
 SOURCES += source/models/client.cpp \
-        source/controllers/master-controller.cpp
+        source/controllers/command-controller.cpp \
+        source/controllers/master-controller.cpp \
+        source/framework/command.cpp
 
 HEADERS += source/gema-lib_global.h \
+    source/controllers/command-controller.h \
+    source/framework/command.h \
     source/models/client.h \
     source/controllers/master-controller.h \
     source/controllers/navigation-controller.h

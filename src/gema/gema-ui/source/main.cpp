@@ -2,6 +2,7 @@
 #include <QQmlApplicationEngine>
 #include <controllers/master-controller.h>
 #include <controllers/navigation-controller.h>
+#include <controllers/command-controller.h>
 
 #include <QQmlContext>
 
@@ -18,6 +19,10 @@ int main(int argc, char *argv[])
     qmlRegisterType<gema::controllers::NavigationController>("GEMA", 1, 0, "NavigationController");
 
     gema::controllers::MasterController masterController;
+
+
+    qmlRegisterType<gema::controllers::CommandController>("GEMA", 1, 0, "CommandController");
+    qmlRegisterType<gema::framework::Command>("GEMA", 1, 0, "Command");
 
     QQmlApplicationEngine engine;
     engine.addImportPath("qrc:/");

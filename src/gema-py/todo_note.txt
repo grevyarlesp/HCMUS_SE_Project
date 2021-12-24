@@ -1,0 +1,2 @@
+- Copy to directory
+- Create a new class called widget manager and move all widgets there

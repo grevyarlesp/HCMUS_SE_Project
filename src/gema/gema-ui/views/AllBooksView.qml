@@ -1,5 +1,6 @@
 import QtQuick 2.9
 import assets 1.0
+import components 1.0
 
 Item {
     Rectangle {
@@ -7,7 +8,7 @@ Item {
         color: Style.colourBackground
         Text {
             anchors.centerIn: parent
-            text: "Dashboard View"
+            text: "Create Client View"
         }
     }
 }
