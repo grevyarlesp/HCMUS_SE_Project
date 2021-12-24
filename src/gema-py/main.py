@@ -2,6 +2,8 @@ import sys
 import os
 from os.path import expanduser
 from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton, QWidget, QAction, QTabWidget,QVBoxLayout,QHBoxLayout, QLabel,QListWidget, QListWidgetItem, QTreeWidget, QTreeWidgetItem
+
+from PyQt5 import QtCore
 from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtSql import QSqlDatabase
@@ -48,6 +50,13 @@ class App(QMainWindow):
                 "AllTree": QTreeWidget(),
                 "CollectionTree": QTreeWidget()
             }
+
+    def keyPressEvent(self, qKeyEvent):
+        if qKeyEvent.key() == QtCore.Qt.Key_Return: 
+            self.widgetsDict['CollectionTree'].clearSelection()
+            self.widgetsDict['AllTree'].clearSelection()
+        else:
+            super().keyPressEvent(qKeyEvent)
 
 
 if __name__ == '__main__':
